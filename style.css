@@ -448,41 +448,74 @@ section {
 
 }
 
-@media (max-width:641px){
-    body{
-        font-size: 12px;
-    }
+/* ===== SMARTPHONES (≤680px) ===== */
+@media (max-width: 680px) {
+  body {
+    font-size: 15px;
+  }
+  .main {
+    display: flex;
+    flex-direction: column; /* stacks items top-to-bottom */
+  /* OR use: display: block; (default) */
+  
+  /* Optional: add spacing between items */
+    gap: 10px;
+  
+  /* Optional: center items horizontally */
+    align-items: center;
+  
+    width: 100%; /* take full width */
+  }
+   .about-me{
+    width: 95%;
+    padding-right: 5px;
+    
+   }
+  .main-image{
+    display: flex;
+    flex-direction: center;
 
-    .main-content h2{
-        font-size: 0.8em;
-    }
+    width: 90%;
+    
+  }
+  section {
+    padding: 20px 40px; !important
+  }
 
-    .main-content h3{
-        font-size: 1.4em;
-    }
-    .main{
-        display: flex;
-        flex-direction: column;
-    }
-    .main-image{
-        width: 90%;
-    }
-    .overview{
+  .title {
+    font-size: 1.3rem;
+  }
+
+  .project-title {
+    flex-direction: column; /* stack title & link */
+    align-items: flex-start;
+  }
+
+  .project-category {
+    font-size: 0.8rem;
+  }
+
+  .more-details {
+    margin-top: 6px;
+    display: inline-block;
+  }
+
+  .cards.contact .card {
+    padding: 15px 10px;
+  }
+
+  .contact .card a {
+    font-size: 0.9rem;
+  }
+
+  .footer {
+    font-size: 0.85rem;
+  }
+  .panel .overview {
+        font-size: 18px; /* تقليل حجم الخط */
+        padding: 15px; /* تقليل التوسيط */
+        border-radius: 8px 8px 0 0; /* تقليل نصف القطر ليصبح مناسبًا للهاتف */
         width: 100%;
     }
-    .overview p{
-        font-size: 1rem;
-    }
-    .overview-btns{
-        display: flex;
-        flex-direction: column;
-    }
-
 }
-
-@media (max-width:300px){
-    body{
-        font-size: 10px;
-     
-    }
 }

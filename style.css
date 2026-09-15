@@ -394,9 +394,10 @@ section {
     height: 100%;
     border-radius: 20px;
     flex: 0.5;
+     transition: flex 0.4s ease-in-out; 
     cursor: pointer;
     overflow: hidden;
-    transition: flex 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+    /* transition: flex 0.6s cubic-bezier(0.4, 1, 0.5, 1); */
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
 }
 
@@ -405,7 +406,7 @@ section {
     position: absolute;
     inset: 0;
     background: linear-gradient(to top, rgba(0, 0, 0, 0.9) 20%, rgba(0, 0, 0, 0.2));
-    transition: background 0.4s ease;
+    transition: background 0.8s ease;
 }
 
 /* Text & Buttons Wrapper */
@@ -481,12 +482,13 @@ section {
 /* Active States via Expanding Mouseover Logic */
 .panel.active {
     flex: 4;
+    
 }
 
 .panel.active .panel-content {
     opacity: 1;
     transform: translateY(0);
-    transition-delay: 0.2s; /* Delays text appearance slightly for an elegant look */
+    transition-delay: 0.3s; /* Delays text appearance slightly for an elegant look */
 }
 
 /* Responsive adjustments for Tablets/Mobile */
@@ -544,7 +546,7 @@ section {
     font-weight: 800;
     margin-top: 10px;
 } */
-.panel{
+/* .panel{
     box-sizing: border-box;
     background-size: auto 100%;
     background-repeat: no-repeat;
@@ -572,7 +574,7 @@ section {
     border-radius: 10px 10px 0 0;
     color: #000;
     padding: 20px;
-    transition: opacity 0.5s ease-in-out;
+    transition: opacity 1.5s ease-in-out;
 
 }
 .overview-btns{
@@ -600,7 +602,7 @@ section {
     text-shadow: 1px 1px 4px black;
     color:red;
     cursor: pointer;
-}
+} */
 .yt-space{
     margin-left: 3px;
 }
@@ -612,15 +614,15 @@ section {
     padding-right: 5px;
 }
 
-.panel.active {
+/* .panel.active {
     flex:5;
-    
+     */
 }
-.panel.active:hover .overview{
+/* .panel.active:hover .overview{
     opacity: 1;
     transition: opacity 0.7s ease-in-out 0.7s;
    
-}
+} */
 
 
 .more-details {
@@ -751,7 +753,7 @@ section {
     
   }
   section {
-    padding: 20px 40px; !important
+    padding: 20px 40px; 
   }
 
   .title {
@@ -790,4 +792,4 @@ section {
         width: 100%;
     }
 }
-}
+

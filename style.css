@@ -105,6 +105,7 @@ section {
     border-radius: 50px 100px;
 }
 .main h2 {
+    
     color: #fff;
     font-size: 1.4em;
     font-weight: 500;
@@ -356,13 +357,17 @@ section {
 .projects-section {
     background-color: #0d0f12;
     padding: 50px 20px;
-    height: 100%;
+    
+    /*  Change this to vh so it reads the screen height directly */
+    min-height: 100vh; 
+    
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: #ffffff;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
+
 
 .section-title {
     font-size: 2.5rem;
@@ -674,8 +679,19 @@ section {
 }
 
 @media (max-width:1030px){
+     html{
+        width: 100%;
+    }
+  body {
+    font-size: 15px;
+  }
+ 
     header{
         padding: 20px 20px;    
+    }
+    .title-header{
+        width: 100%;
+        font-size: small;
     }
     header.active{
         padding: 12px 20px;
@@ -713,20 +729,23 @@ section {
         
         width: 100vw;
     }
-
-    .panel:nth-of-type(4),.panel:nth-of-type(5){
-        display: none;
-
-    }
     
 
 }
 
 /* ===== SMARTPHONES (≤680px) ===== */
 @media (max-width: 680px) {
+    html{
+        width: 100%;
+    }
   body {
     font-size: 15px;
   }
+   h2 .title-header{
+        width: 100%;
+        font-size: smaller;
+        color: #00f2fe;
+    }
   .main {
     display: flex;
     flex-direction: column; /* stacks items top-to-bottom */

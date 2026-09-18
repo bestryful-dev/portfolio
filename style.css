@@ -43,13 +43,7 @@ header a.current ,header a:hover{
 header a.current{
     font-weight: bold;
 }
-/* .logo{
-    text-decoration: none;
-    color: #3a6cf4;
-    text-transform: uppercase;
-    font-weight: 700;
-    font-size: 1.8em;
-} */
+
 
 .navigation a{
     color: #3a6cf4;
@@ -61,9 +55,7 @@ header a.current{
     
 }
 
-/* .navigation a:hover{
-    color: #601cfc;
-} */
+
  .about-me{
     width: 70%;
     padding-right: 20px;
@@ -74,11 +66,6 @@ header a.current{
     color: blue;
  }
 
-/* .Projects p {
-    border-left-style: solid !important;
-    border-left-width: 5px !important;
-    border-left-color: blue !important;
-} */
 section {
     padding: 100px 200px;
 }
@@ -220,31 +207,7 @@ section {
     font-weight: 700;
     margin: 10px;
 }
-/* .Projects{
-    box-sizing: border-box;
 
-}
-.projects-contents {
-    background-color: transparent;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-    overflow: hidden;
-    margin: 0;
-    padding: 0;
-}
-
-.Projects .content{
-    min-height: 0;
-    overflow: hidden;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: white;
-    width: 100%;
-} */
- /* Layout Header Adjustments */
 .projects-header {
     display: flex;
     justify-content: space-between;
@@ -300,11 +263,6 @@ section {
     cursor: pointer !important;
 }
 
-/* ============================================================ */
-/* 2. HOVER REVEAL LOGIC FOR TEXT AND BUTTONS                   */
-/* ============================================================ */
-
-/* Completely hide text and buttons by default inside Grid View */
 .projects-container.grid-view .panel .panel-content {
     opacity: 0 !important;
     visibility: hidden !important;
@@ -322,11 +280,6 @@ section {
     transform: translateY(0) !important; /* Transitions up to its original spot */
 }
 
-/* ============================================================ */
-/* 3. DYNAMIC BACKGROUND DIMMING ON HOVER                       */
-/* ============================================================ */
-
-/* Initially hide the dark overlay filter layer */
 .projects-container.grid-view .panel .panel-overlay {
     background: linear-gradient(to top, rgba(0, 0, 0, 0.95) 0%, rgba(0, 0, 0, 0.5) 60%, rgba(0, 0, 0, 0.1) 100%) !important;
     opacity: 0 !important;
@@ -334,13 +287,11 @@ section {
     transition: opacity 0.4s ease !important;
 }
 
-/* Fade in the dark gradient on hover to make your text highly readable */
 .projects-container.grid-view .panel:hover .panel-overlay {
     opacity: 1 !important;
 }
 
 
-/* Forces panels inside grid view to behave like standard block cards */
 .projects-container.grid-view .panel {
     flex: none; 
     height: 380px; 
@@ -402,11 +353,10 @@ section {
      transition: flex 0.4s ease-in-out; 
     cursor: pointer;
     overflow: hidden;
-    /* transition: flex 0.6s cubic-bezier(0.4, 1, 0.5, 1); */
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
 }
 
-/* Dark Frosted Overlay */
+
 .panel-overlay {
     position: absolute;
     inset: 0;
@@ -414,7 +364,7 @@ section {
     transition: background 0.8s ease;
 }
 
-/* Text & Buttons Wrapper */
+
 .panel-content {
     position: absolute;
     bottom: 0;
@@ -451,7 +401,6 @@ section {
     max-width: 550px;
 }
 
-/* Button Styling Layout */
 .project-btns {
     display: flex;
     gap: 12px;
@@ -484,7 +433,7 @@ section {
 .btn-download { background-color: #0077ff; color: #fff; }
 .btn-download:hover { background-color: #0055cc; }
 
-/* Active States via Expanding Mouseover Logic */
+
 .panel.active {
     flex: 4;
     
@@ -493,10 +442,10 @@ section {
 .panel.active .panel-content {
     opacity: 1;
     transform: translateY(0);
-    transition-delay: 0.3s; /* Delays text appearance slightly for an elegant look */
+    transition-delay: 0.3s; 
 }
 
-/* Responsive adjustments for Tablets/Mobile */
+
 @media (max-width: 768px) {
     .projects-container {
         flex-direction: column;
@@ -504,7 +453,7 @@ section {
     }
     .panel {
         height: 300px;
-        flex: none !important; /* Disables flex width expansion on small mobile viewports */
+        flex: none !important; 
     }
     .panel-content {
         opacity: 1;
@@ -512,123 +461,97 @@ section {
     }
 }
 
-/* .project-card {
-    background-color: #fff;
-    border: 1px solid #fff;
-    min-height: 14em;
-    width: 23em;
-    overflow: hidden;
+
+
+\\\\\\\\\\\\\\\\\\\\\\contact
+/* Card Setup */
+.card {
+    background: #ffffff;
+    border-radius: 16px;
+    padding: 24px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    max-width: 320px;
+}
+
+
+.info h3 {
+    margin: 0 0 14px 0;
+    font-size: 1.15rem;
+    color: #1d1d1f;
+    font-weight: 600;
+}
+
+.links-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+
+.contact-btn {
+    display: flex;
+    flex-direction: column;
+    padding: 10px 14px;
     border-radius: 10px;
-    margin: 20px;
-    transition: 0.7s ease;
+    text-decoration: none;
+    transition: all 0.25s ease;
+    border: 1px solid #f0f0f2;
+    background: #fdfdfd;
 }
 
-.project-card:hover {
-   transform: scale(1.1);
-} */
-
-/* .project-card:hover .project-image {
-    opacity: 0.9;
- }
-
-.project-image img{
-    width: 100%
-}
-
-.project-info {
-    padding: 1em;
-}
-
-.project-category {
-    font-size: 0.8em;
-    color: #000;
-}
-
-.project-title {
-    display: flex;
-    justify-content: space-between;
+/* Button Typography */
+.contact-btn .label {
+    font-size: 0.75rem;
     text-transform: uppercase;
-    font-weight: 800;
-    margin-top: 10px;
-} */
-/* .panel{
-    box-sizing: border-box;
-    background-size: auto 100%;
-    background-repeat: no-repeat;
-    background-position: center;
-    height: 590px;
-    width: 100%;
-    border-radius: 50px;
-    cursor: pointer;
-    flex: 0.5;
-    margin: 10px;
-    position: relative;
-    transition: flex 0.7s ease-in;
-    overflow: hidden;
+    letter-spacing: 0.5px;
+    font-weight: 700;
+    margin-bottom: 2px;
 }
 
-.panel .overview{
-    position:absolute;
-    font-size: 25px;
-    left: 0px;
-    bottom: 0px;
-    margin: 0;
-    opacity: 0;
-    box-shadow: 0 5px 25px rgba(1, 1, 1, 0.474);
-    background-color: rgba(244, 248, 248, 0.675);
-    border-radius: 10px 10px 0 0;
-    color: #000;
-    padding: 20px;
-    transition: opacity 1.5s ease-in-out;
-
-}
-.overview-btns{
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-    box-sizing: content-box;
-}
-.overview-btns .btn{
-    font-size: medium;
-    box-sizing: content-box;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: nowrap;
-    height: 40px;
-    width: 130px;
-    border:4px solid rgb(56, 56, 231);
-    background-color: transparent;
-    margin: 10px;
-    
-}
-.overview-btns .btn:hover{
-    background-color: rgb(56, 56, 231);
-    text-shadow: 1px 1px 4px black;
-    color:red;
-    cursor: pointer;
-} */
-.yt-space{
-    margin-left: 3px;
-}
-.overview-btns .btn:hover .yt-space{
-    color: white;
-}
-.fab.fa-youtube {
-    padding-right: 5px;
-    padding-right: 5px;
+.contact-btn .number {
+    font-size: 0.95rem;
+    font-weight: 500;
 }
 
-/* .panel.active {
-    flex:5;
-     */
+/* Hover States & Vibrant Color Pops */
+.phone-link .label { color: #007AFF; }
+.phone-link .number { color: #3a3a3c; }
+.phone-link:hover {
+    background: #007AFF;
+    border-color: #007AFF;
 }
-/* .panel.active:hover .overview{
-    opacity: 1;
-    transition: opacity 0.7s ease-in-out 0.7s;
-   
-} */
 
+.whatsapp-link .label { color: #25D366; }
+.whatsapp-link .number { color: #3a3a3c; }
+.whatsapp-link:hover {
+    background: #25D366;
+    border-color: #25D366;
+}
+
+.email-link .label { color: #FE2C55; }
+.email-link .number { color: #3a3a3c; }
+.email-link:hover {
+    background: #FE2C55;
+    border-color: #FE2C55;
+}
+
+/* Universal hover inversion rule */
+.contact-btn:hover .label,
+.contact-btn:hover .number {
+    color: #ffffff !important;
+}
+
+.contact-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+
+\\\\\\\\\\\\\\\\\\\\\\contact
 
 .more-details {
     text-decoration: none;
@@ -712,18 +635,15 @@ section {
         padding: 80px 20px;
     }
 
-    .main-content h2{
-        font-size: 1em;
+    .main h2{
+        font-size: 1.1em;
     }
 
-    .main-content h3{
+    .main h3{
         font-size: 1.6em;
     }
 
-    /* .content{
-        flex-direction: column;
-        align-items: center;
-    } */
+
     
     .Projects .content{
         
@@ -744,32 +664,28 @@ section {
    h2 .title-header{
         width: 100%;
         font-size: smaller;
-        color: #00f2fe;
+        color: #ad4f10;
     }
   .main {
     display: flex;
-    flex-direction: column; /* stacks items top-to-bottom */
-  /* OR use: display: block; (default) */
-  
-  /* Optional: add spacing between items */
+    flex-direction: column; 
     gap: 10px;
-  
-  /* Optional: center items horizontally */
     align-items: center;
-  
-    width: 100%; /* take full width */
+    width: 100%; 
+    padding-top: 20px !important; 
   }
+  
    .about-me{
     width: 95%;
     padding-right: 5px;
     
    }
+   .email-link .number{
+    width: 100%;
+   }
   .main-image{
-    display: flex;
-    flex-direction: center;
-
     width: 90%;
-    
+    height: 350px;
   }
   section {
     padding: 20px 40px; 
@@ -780,7 +696,7 @@ section {
   }
 
   .project-title {
-    flex-direction: column; /* stack title & link */
+    flex-direction: column;
     align-items: flex-start;
   }
 
@@ -792,6 +708,15 @@ section {
     margin-top: 6px;
     display: inline-block;
   }
+.contact-btn .number {
+    font-size: 0.95rem;
+    font-weight: 500;
+    
+    
+    word-break: break-all;       
+    overflow-wrap: break-word;   
+    white-space: normal;        
+}
 
   .cards.contact .card {
     padding: 15px 10px;
@@ -805,9 +730,9 @@ section {
     font-size: 0.85rem;
   }
   .panel .overview {
-        font-size: 18px; /* تقليل حجم الخط */
-        padding: 15px; /* تقليل التوسيط */
-        border-radius: 8px 8px 0 0; /* تقليل نصف القطر ليصبح مناسبًا للهاتف */
+        font-size: 18px;
+        padding: 15px;
+        border-radius: 8px 8px 0 0;
         width: 100%;
     }
 }

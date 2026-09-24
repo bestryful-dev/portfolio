@@ -69,6 +69,10 @@ window.addEventListener('scroll', () => {
         minimize.classList.remove('active');
     }
 });
+window.addEventListener('load', function () {
+      const preloader = document.getElementById('preloader');
+      preloader.classList.add('fade-out');
+    });
 
 
 
